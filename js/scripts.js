@@ -1,12 +1,16 @@
 //business logic
-function Bank (name, initialDeposit) {
+
+function BankAccount (name, initialDeposit) {
   this.name = name;
   this.initialDeposit = initialDeposit;
+  this.deposits = [];
+  this.withdrawals = [];
 };
 
-Bank.prototype.withdrawlFunds = function (initialDeposit,withdrawlAmount) {
-  return this.initialDeposit - this.withdrawlAmount;
+BankAccount.prototype.currentBalace = function(initialDeposit, deposits, withdrawals) {
+  return initialDeposit + deposits - withdrawals;
 }
+
 
 function resetFields() {
   $("input.initial-deposit").val("");
@@ -16,6 +20,14 @@ function resetFields() {
 
 //user logic
 $(document).ready(function() {
+  $("form-group#create").submit(function(event) {
   var userName = $("input#yourname").val();
   var initialDeposit = parseInt($("input.initial-deposit").val());
-}
+  });
+  $("form-group#submit").submit(function(event) {
+  this.deposits.push(parseInt($("input.deposit").val()));
+  this.withdrawals.push(parseInt($("input.withdrawal").val()));
+  var currentTransaction = new  (inpdeposits, withdrawals);
+
+  });
+});

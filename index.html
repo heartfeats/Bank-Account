@@ -16,38 +16,55 @@
         <h1><center>Bank Account App</center></h1>
       </div>
       <div class="row">
-        <div class="col-md-5 box">
+        <div class="col-md-6 box">
           <h2>Register a new account:</h2>
-          <form id="bankInput">
+          <form id="new-account">
             <div class="form-group">
               <label for="yourname">Name:</label>
               <input id="yourname" type="text">
             </div>
             <div class="form-group">
               <label for="initial-deposit">Initial Deposit:<label>
-              <input class="initial-deposit" type="text">
+                <input class="initial-deposit" type="text">
             </div>
+            <div class="form-group">
+              <label for="checkingSavings" required>Choose your Account</label>
+                <select>
+                  <option>Checking</option>
+                  <option>Saving</option>
+                </select>
+              <br>  
+              <button id="create" type="submit">Create account</button>
+            </form>
           </div>
-          <div class="col-md-5 box">
-            <h2>Deposit or withdraw funds:</h2>
+        </div>
+        <div class="col-md-6 box">
+          <h2>Deposit or withdraw funds:</h2>
+          <form id="transaction">
             <div class="form-group">
               <label for="deposit">Deposit Amount:</label>
               <input class="deposit" type="text">
             </div>
               <label for="withdrawal">Withdrawal Amount:</label>
               <input class="withdrawal" type="text">
+            </div>
+
+            <button id="submit" type="submit">Submit</button>
+          </form>
+        </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Accounts:</h3>
+          <div id="outputAccounts">
+            <h4>list of accounts here</h4>
           </div>
         </div>
-        <div class="row">
-          <button type="calculate">Calculate Transaction</button>
 
-        </div>
-      </form>
-      <div class="row box">
-        <div id="currentbalance">
-          <h3>Current Balance:</h3>
-          <div class="outputReading">
-            <h4>$400</h4>
+        <div class="col-md-6">
+          <h3>Transactions:</h3>
+          <div id="transactions">
+            <h4>list of transaction history here</h4>
           </div>
         </div>
       </div>
