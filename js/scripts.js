@@ -1,6 +1,6 @@
 //business logic
 
-function BankAccount (name, initialDeposit) {
+function BankAccount (name, initialDeposit, deposits, withdrawals) {
   this.name = name;
   this.initialDeposit = initialDeposit;
   this.deposits = [];
@@ -21,13 +21,16 @@ function resetFields() {
 //user logic
 $(document).ready(function() {
   $("form-group#create").submit(function(event) {
-  var userName = $("input#yourname").val();
+  var accountType = $("#selectAccount").val();
+  var name = $("input#yourname").val();
+  var accountName = name + " " + accountType;
   var initialDeposit = parseInt($("input.initial-deposit").val());
   });
   $("form-group#submit").submit(function(event) {
   this.deposits.push(parseInt($("input.deposit").val()));
   this.withdrawals.push(parseInt($("input.withdrawal").val()));
-  var currentTransaction = new  (inpdeposits, withdrawals);
-
+  var newAccount = new BankAccount (this.initialDeposit, this.deposits, this.withdrawals);
+ $(".BankAccount").last().click(function() {
+  $("#transactions").text(
   });
 });
